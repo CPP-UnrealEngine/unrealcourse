@@ -98,11 +98,11 @@ void UBullCowCartridge::CalcBullsCows(const FString& Guess, int32 &Bulls, int32 
         for(int32 j = 0; j < HiddenWord.Len(); ++j){
             if( Guess[i] == HiddenWord[j]  && i == j){
                 ++Bulls;
-                continue;
+                break;;
             }
             else if( Guess[i] == HiddenWord[j] && i != j){
                 ++Cows;
-                continue;
+                break;;
             }
         }
     }
